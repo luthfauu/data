@@ -3,26 +3,24 @@
 ## Objective
 To analyze healthcare performance metrics and visualize key KPIs using Excel for actionable insights across hospitals, patients, and health conditions.
 
----
 
 ## Dataset
 - Original data: 3 separate sheets (merged using VLOOKUP into a single cleaned Excel file)  
 - Cleaned dataset available in `cleaned&merged.xlsx`
 
----
+
 
 ## Tools Used
 - Microsoft Excel  
 - Pivot Tables, Slicers, and Charts  
 
----
 
 ## Data Preparation
 - Merged multiple sheets into one master dataset using VLOOKUP  
 - Removed duplicates and null values  
 - Standardized columns for hospital, patient, and health condition fields  
 
----
+
 
 ## Dashboard Features
 - Interactive **Annual Healthcare Report (2023)**  
@@ -36,7 +34,7 @@ To analyze healthcare performance metrics and visualize key KPIs using Excel for
 - Visual insights across states and hospital tiers  
 - Highlights trends and cost variations  
 
----
+
 
 ## Key Skills Demonstrated
 - Excel-based analytics  
@@ -44,7 +42,6 @@ To analyze healthcare performance metrics and visualize key KPIs using Excel for
 - Dashboard design and interactivity  
 - Data storytelling for decision-making  
 
----
 
 ## Files Included
 - `cleaned&merged.xlsx` – Cleaned and merged dataset  

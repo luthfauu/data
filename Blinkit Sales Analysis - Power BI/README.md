@@ -3,7 +3,6 @@
 ## Objective
 To analyze sales performance, customer behavior, and outlet-level trends for Blinkit using Power BI and uncover insights that support business decision-making.
 
----
 
 ## Dataset
 - ~8,500 sales records  
@@ -14,14 +13,14 @@ To analyze sales performance, customer behavior, and outlet-level trends for Bli
   - Outlet Establishment Year  
   - Ratings, Sales and Order metrics  
 
----
+
 
 ## Tools Used
 - **Power BI** – Data modeling, DAX calculations, dashboard creation  
 - **Power Query** – Data cleaning and transformation  
 - **Bookmarks & Slicers** – Interactive navigation between Home and Matrix views  
 
----
+
 
 ## Data Preparation
 - Cleaned missing and inconsistent values using Power Query  
@@ -32,7 +31,7 @@ To analyze sales performance, customer behavior, and outlet-level trends for Bli
   - Order Count  
   - Average Rating  
 
----
+
 
 ## Dashboard Features
 - Dynamic KPI cards for:
@@ -54,7 +53,7 @@ To analyze sales performance, customer behavior, and outlet-level trends for Bli
   - Item Type  
   - Outlet Establishment Year  
 
----
+
 
 ## Key Insights
 - Tier-3 outlets generated the highest total sales compared to Tier-1 and Tier-2.  
@@ -63,7 +62,7 @@ To analyze sales performance, customer behavior, and outlet-level trends for Bli
 - Tier-2 outlets show high average order value but lower volume, highlighting strong expansion potential.  
 - Sales peaked around 2018, indicating a rapid growth phase before stabilizing.
 
----
+
 
 ## Files Included
 - `BLINKIT DASHBOARD.pbix` – Power BI dashboard file  
@@ -71,7 +70,7 @@ To analyze sales performance, customer behavior, and outlet-level trends for Bli
 - `BLINKIT DASHBOARD.png` – Snapshot of the dashboard page1 
 - `BLINKIT DASHBOARD PAGE2.png` – Snapshot of the dashboard page2
 
----
+
 
 ## Skills Demonstrated
 - Power BI Dashboard Design  
