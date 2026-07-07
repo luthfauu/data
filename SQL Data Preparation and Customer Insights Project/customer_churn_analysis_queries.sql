@@ -70,18 +70,26 @@ LIMIT 1;
 -- Result: city tier 3 with	150
 -- Insight: -- Insight: Customers in Tier-3 cities show the highest churn in the Laptop & Accessory category, indicating possible issues with pricing, delivery, or service quality in these regions.
 
+-- d. Identify category wise churn rate and rank them (using SUB QUERY and WINDOW function)
+WITH category_churn AS (
+    SELECT 
+        PreferredOrderCat,
+        COUNT(*) AS total_customers,
+        SUM(CASE WHEN ChurnStatus='Churned' THEN 1 ELSE 0 END) AS churned_customers
+    FROM customer_churn
+    GROUP BY PreferredOrderCat
+)
 
--- d.most preferred payment mode among active customers
-SELECT PreferredPaymentMode, COUNT(*) AS cust_count
-FROM customer_churn
-WHERE ChurnStatus = 'Active'
-GROUP BY PreferredPaymentMode
-ORDER BY cust_count DESC
-LIMIT 1;
--- 	Debit Card	1956
--- Insight: Debit Card is the most preferred payment mode among active customers, suggesting that maintaining seamless card payment experience is important for retention.
+SELECT *,
+       ROUND((churned_customers*100.0/total_customers),2) AS churn_rate,
+       RANK() OVER (ORDER BY (churned_customers*100.0/total_customers) DESC) AS churn_rank
+FROM category_churn;
+-- Mobile Phone → 27.43% churn
+-- Fashion → 15.5%
+-- Laptop & Accessory → 10.24%
+-- Others → 7.58%
+-- Grocery → 4.88%
 
-      
 -- e. average satisfaction score of customers who have complained?
 SELECT ROUND(AVG(SatisfactionScore),0)
 FROM customer_churn
@@ -156,13 +164,24 @@ JOIN customer_churn cc
 WHERE cc.ChurnStatus = 'Churned'
   AND cc.ComplaintReceived = 'Yes';
   
+  -- i. most preferred payment mode among active customers
+SELECT PreferredPaymentMode, COUNT(*) AS cust_count
+FROM customer_churn
+WHERE ChurnStatus = 'Active'
+GROUP BY PreferredPaymentMode
+ORDER BY cust_count DESC
+LIMIT 1;
+-- 	Debit Card	1956
+-- Insight: Debit Card is the most preferred payment mode among active customers, suggesting that maintaining seamless card payment experience is important for retention.
+
+
 
 -- RECOMMENDED ACTIONS:
 -- 1. Strengthen customer support resolution processes, as a high proportion of churned users had raised complaints.
 -- 2. Investigate logistics, delivery time, and pricing strategies in Tier-3 regions where churn is highest for Laptop products.
 -- 3. Improve delivery efficiency for customers located far from warehouses, as churn appears higher among distant customers.
 -- 4. Maintain smooth debit card payment experience and promotions, since it is the most preferred payment mode among retained users. 
-
+-- 5. Reduce churn in the mobile phone category, which showed the highest churn rate (27.4%) across all product categories.
 
 
 
