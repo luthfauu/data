@@ -4,7 +4,7 @@
 
 ## Objective
 
-To analyze customer churn patterns and identify factors contributing to customer attrition using SQL-based data preparation and exploratory analysis.
+To analyze customer churn patterns and identify factors contributing to customer attrition using SQL-based data preparation and exploratory analysis, and then suggesting recommendations to improve retention.
 
 ---
 
@@ -24,7 +24,7 @@ The dataset contains 5,000+ records of customer demographics, transaction behavi
 
 - Handled missing values and inconsistent labels  
 - Created derived customer indicators  
-- Performed grouped analysis using aggregations, joins, and subqueries  
+- Performed grouped analysis using aggregations, joins, case statements, window functions and subqueries  
 
 ---
 
@@ -34,6 +34,7 @@ The dataset contains 5,000+ records of customer demographics, transaction behavi
 - Customers located farther from warehouses show higher churn counts, suggesting delivery experience impacts loyalty.  
 - Tier-3 regions show elevated churn in certain product categories, indicating regional service or pricing gaps.  
 - Debit card users form the largest retained customer group, emphasizing the importance of smooth payment experience.  
+- Mobile Phone customers had the highest churn rate (27.4%) among all product categories, indicating a higher risk of customer loss in this segment.
 
 ---
 
@@ -43,6 +44,7 @@ The dataset contains 5,000+ records of customer demographics, transaction behavi
 - Review logistics performance for distant customers.  
 - Investigate product-category churn drivers in Tier-3 cities.  
 - Maintain reliable debit-card payment experience and offers.  
+- Implement targeted retention strategies for Mobile Phone customers, such as personalized offers, loyalty rewards, and proactive customer support, to reduce churn.
 
 ---
 
